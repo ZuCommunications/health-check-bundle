@@ -1,6 +1,8 @@
 services:
 
-  # Controller
+  #######< Controllers Start >#######
+
+  ###< Health Check Controllers >###
   Zu\HealthCheckBundle\Controller\HealthCheckController:
     public: true
     arguments:
@@ -12,10 +14,26 @@ services:
   zu_health_check_bundle.controller.health_check:
     alias: Zu\HealthCheckBundle\Controller\HealthCheckController
     public: true
+  #######< Controllers End >#######
 
-  # Services
-  Zu\HealthCheckBundle\Services\HealthCheckService: ~
+  #######< Services Start >#######
+
+  ###< Health Check Services >###
+  Zu\HealthCheckBundle\Services\HealthCheckService:
+    public: true
+    arguments:
+      $doctrineCheckService: '@zu_health_check_bundle.service.doctrine_check'
 
   zu_health_check_bundle.service.health_check:
     alias: Zu\HealthCheckBundle\Services\HealthCheckService
     public: true
+
+  ###< Doctrine Check Services >###
+  Zu\HealthCheckBundle\Services\DoctrineCheckService:
+    public: true
+
+  zu_health_check_bundle.service.doctrine_check:
+    alias: Zu\HealthCheckBundle\Services\DoctrineCheckService
+    public: true
+
+  #######< Services End >#######

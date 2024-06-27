@@ -5,13 +5,13 @@ namespace Zu\HealthCheckBundle\Services;
 class HealthCheckService
 {
     public function __construct(
-//        private DoctrineCheckerService $doctrineCheckerService,
+        private DoctrineCheckService $doctrineCheckService,
     )
     {
     }
 
     public function check()
     {
-//        return $this->doctrineCheckerService->check();
+        return $this->doctrineCheckService->check();
     }
 }

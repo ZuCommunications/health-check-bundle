@@ -2,7 +2,7 @@
 
 namespace Zu\HealthCheckBundle\Services;
 
-class DoctrineCheckerService implements CheckerInterface
+class DoctrineCheckService implements CheckerInterface
 {
     public function __construct(
         private bool $enabled
