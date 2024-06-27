@@ -6,6 +6,7 @@ use Symfony\Component\Config\Definition\Configurator\DefinitionConfigurator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symfony\Component\HttpKernel\Bundle\AbstractBundle;
+use Zu\HealthCheckBundle\Services\DoctrineCheckService;
 
 class ZuHealthCheckBundle extends AbstractBundle
 {
@@ -13,12 +14,12 @@ class ZuHealthCheckBundle extends AbstractBundle
     {
         $definition->rootNode()
             ->children()
-            ->arrayNode('types')
-            ->children()
-            ->booleanNode('doctrine')->defaultFalse()->end()
-            ->booleanNode('smtp')->defaultFalse()->end()
-            ->end()
-            ->end()
+                ->arrayNode('types')
+                    ->children()
+                        ->booleanNode('doctrine')->defaultFalse()->end()
+                        ->booleanNode('smpt')->defaultFalse()->end()
+                    ->end()
+                ->end()
             ->end()
         ;
     }
@@ -27,14 +28,17 @@ class ZuHealthCheckBundle extends AbstractBundle
     {
         $container->import('../config/services.yaml');
 
-        // Set the parameter for the DoctrineCheckService
-        $container->parameters()
-            ->set('zu_health_check.types.doctrine', $config['types']['doctrine']);
+        $builder->getDefinition('zu_health_check.service.doctrine_check')
+            ->setArgument(0, true)
+        ;
 
-        // Ensure the DoctrineCheckService is correctly registered with the configuration parameter
-        $container->services()
-            ->get('zu_health_check.service.doctrine_check')
-            ->arg('$enabled', '%zu_health_check.types.doctrine%');
+        $builder->register('zu_health_check.service.doctrine_check', DoctrineCheckService::class)
+            ->setArgument(0, true)
+        ;
+
+        // This is not working. Has no effect.
+        $container->services()->get('zu_health_check.service.doctrine_check')
+            ->arg(0, true)
+        ;
     }
 }
-

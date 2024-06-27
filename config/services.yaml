@@ -1,14 +1,17 @@
-# src/Resources/config/services.yaml
 services:
+
   #######< Controllers Start >#######
+
+  ###< Health Check Controllers >###
   zu_health_check.controller.health_check:
     class: Zu\HealthCheckBundle\Controller\HealthCheckController
+
     public: true
     arguments:
       $healthCheckService: '@zu_health_check.service.health_check'
     calls:
       - method: setContainer
-        arguments: ['@service_container']
+        arguments: [ '@service_container' ]
 
   Zu\HealthCheckBundle\Controller\HealthCheckController:
     alias: zu_health_check.controller.health_check
@@ -16,23 +19,21 @@ services:
   #######< Controllers End >#######
 
   #######< Services Start >#######
+
+  ###< Health Check Services >###
   zu_health_check.service.health_check:
     class: Zu\HealthCheckBundle\Services\HealthCheckService
     arguments:
       $doctrineCheckService: '@zu_health_check.service.doctrine_check'
-    public: true
 
   Zu\HealthCheckBundle\Services\HealthCheckService:
     alias: zu_health_check.service.health_check
-    public: true
 
+  ###< Doctrine Check Services >###
   zu_health_check.service.doctrine_check:
     class: Zu\HealthCheckBundle\Services\DoctrineCheckService
-    arguments:
-      $enabled: '%zu_health_check.types.doctrine%'
-    public: true
 
   Zu\HealthCheckBundle\Services\DoctrineCheckService:
     alias: zu_health_check.service.doctrine_check
-    public: true
+
   #######< Services End >#######
