@@ -32,6 +32,8 @@ services:
   ###< Doctrine Check Services >###
   zu_health_check.service.doctrine_check:
     class: Zu\HealthCheckBundle\Services\DoctrineCheckService
+    arguments:
+      $enabled: '%zu_health_check.types.doctrine%'
 
   Zu\HealthCheckBundle\Services\DoctrineCheckService:
     alias: zu_health_check.service.doctrine_check

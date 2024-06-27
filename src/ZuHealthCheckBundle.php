@@ -17,7 +17,7 @@ class ZuHealthCheckBundle extends AbstractBundle
                 ->arrayNode('types')
                     ->children()
                         ->booleanNode('doctrine')->defaultFalse()->end()
-                        ->booleanNode('smpt')->defaultFalse()->end()
+                        ->booleanNode('smtp')->defaultFalse()->end()
                     ->end()
                 ->end()
             ->end()
@@ -28,17 +28,13 @@ class ZuHealthCheckBundle extends AbstractBundle
     {
         $container->import('../config/services.yaml');
 
-        $builder->getDefinition('zu_health_check.service.doctrine_check')
-            ->setArgument(0, true)
-        ;
+        // Set the parameter for the DoctrineCheckService
+        $container->parameters()
+            ->set('zu_health_check.types.doctrine', $config['types']['doctrine']);
 
-        $builder->register('zu_health_check.service.doctrine_check', DoctrineCheckService::class)
-            ->setArgument(0, true)
-        ;
-
-        // This is not working. Has no effect.
-        $container->services()->get('zu_health_check.service.doctrine_check')
-            ->arg(0, true)
-        ;
+        // Ensure the DoctrineCheckService is correctly registered with the configuration parameter
+        $container->services()
+            ->get('zu_health_check.service.doctrine_check')
+            ->arg('$enabled', '%zu_health_check.types.doctrine%');
     }
 }
