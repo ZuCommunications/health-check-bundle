@@ -28,8 +28,16 @@ class ZuHealthCheckBundle extends AbstractBundle
     {
         $container->import('../config/services.yaml');
 
+        $builder->getDefinition('zu_health_check.service.doctrine_check')
+            ->setArgument(0, true)
+        ;
+
+        $builder->register('zu_health_check.service.doctrine_check', DoctrineCheckService::class)
+            ->setArgument(0, true)
+        ;
+
         // This is not working. Has no effect.
-        $container->services()->set('Zu\HealthCheckBundle\Services\DoctrineCheckService')
+        $container->services()->get('zu_health_check.service.doctrine_check')
             ->arg(0, true)
         ;
     }

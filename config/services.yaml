@@ -3,37 +3,37 @@ services:
   #######< Controllers Start >#######
 
   ###< Health Check Controllers >###
-  Zu\HealthCheckBundle\Controller\HealthCheckController:
+  zu_health_check.controller.health_check:
+    class: Zu\HealthCheckBundle\Controller\HealthCheckController
+
     public: true
     arguments:
-      $healthCheckService: '@zu_health_check_bundle.service.health_check'
+      $healthCheckService: '@zu_health_check.service.health_check'
     calls:
       - method: setContainer
         arguments: [ '@service_container' ]
 
-  zu_health_check_bundle.controller.health_check:
-    alias: Zu\HealthCheckBundle\Controller\HealthCheckController
+  Zu\HealthCheckBundle\Controller\HealthCheckController:
+    alias: zu_health_check.controller.health_check
     public: true
   #######< Controllers End >#######
 
   #######< Services Start >#######
 
   ###< Health Check Services >###
-  Zu\HealthCheckBundle\Services\HealthCheckService:
-    public: true
+  zu_health_check.service.health_check:
+    class: Zu\HealthCheckBundle\Services\HealthCheckService
     arguments:
-      $doctrineCheckService: '@zu_health_check_bundle.service.doctrine_check'
+      $doctrineCheckService: '@zu_health_check.service.doctrine_check'
 
-  zu_health_check_bundle.service.health_check:
-    alias: Zu\HealthCheckBundle\Services\HealthCheckService
-    public: true
+  Zu\HealthCheckBundle\Services\HealthCheckService:
+    alias: zu_health_check.service.health_check
 
   ###< Doctrine Check Services >###
-  Zu\HealthCheckBundle\Services\DoctrineCheckService:
-    public: true
+  zu_health_check.service.doctrine_check:
+    class: Zu\HealthCheckBundle\Services\DoctrineCheckService
 
-  zu_health_check_bundle.service.doctrine_check:
-    alias: Zu\HealthCheckBundle\Services\DoctrineCheckService
-    public: true
+  Zu\HealthCheckBundle\Services\DoctrineCheckService:
+    alias: zu_health_check.service.doctrine_check
 
   #######< Services End >#######
