@@ -1,0 +1,4 @@
+zu_health_check:
+  types:
+    doctrine:             false
+    smpt:                 false

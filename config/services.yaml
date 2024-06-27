@@ -1,0 +1,21 @@
+services:
+
+  # Controller
+  Zu\HealthCheckBundle\Controller\HealthCheckController:
+    public: true
+    arguments:
+      $healthCheckService: '@zu_health_check_bundle.service.health_check'
+    calls:
+      - method: setContainer
+        arguments: [ '@service_container' ]
+
+  zu_health_check_bundle.controller.health_check:
+    alias: Zu\HealthCheckBundle\Controller\HealthCheckController
+    public: true
+
+  # Services
+  Zu\HealthCheckBundle\Services\HealthCheckService: ~
+
+  zu_health_check_bundle.service.health_check:
+    alias: Zu\HealthCheckBundle\Services\HealthCheckService
+    public: true
