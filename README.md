@@ -12,3 +12,6 @@ A brief introduction to what your bundle does and why it's useful. Mention any s
 ## Installation
 
 - TODO
+
+## Development
+Run the project with `symfony server:start`.
