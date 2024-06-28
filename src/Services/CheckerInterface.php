@@ -2,8 +2,11 @@
 
 namespace Zu\HealthCheckBundle\Services;
 
+use Symfony\Component\HttpFoundation\JsonResponse;
+
 interface CheckerInterface
 {
-    public function check(): bool;
-    public function getName(): string;
+    public function check(): JsonResponse;
+    function createResponse(): JsonResponse;
+    function getName(): string;
 }

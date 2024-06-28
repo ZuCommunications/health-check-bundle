@@ -2,23 +2,42 @@
 
 namespace Zu\HealthCheckBundle\Services;
 
-class DoctrineCheckService implements CheckerInterface
+use Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Component\HttpFoundation\JsonResponse;
+
+class DoctrineCheckService extends AbstractChecker
 {
+
     public function __construct(
-        private bool $enabled
+        private readonly ContainerInterface $container
     )
     {
+        parent::__construct();
     }
 
-    public function check(): bool
+    /**
+     * @throws \Exception
+     */
+    public function check(): JsonResponse
     {
-        if (!$this->enabled) {
-            return false;
+        try {
+            $entityManager = $this->container->get('doctrine.orm.entity_manager');
+
+            $entityManager->getConnection()->connect();
+            if ($entityManager->getConnection()->isConnected()) {
+                $this->data->setStatus(AbstractChecker::$CONNECTION_OK);
+            } else {
+                $this->data->setStatus(AbstractChecker::$CONNECTION_FAIL);
+                $this->data->setMessage(AbstractChecker::$CONNECTION_FAILED_MESSAGE);
+            }
+        } catch(\Exception $e) {
+            $this->data->setStatus(AbstractChecker::$CONNECTION_ERROR);
+            $this->data->setMessage(AbstractChecker::$CONNECTION_ERROR_MESSAGE);
         }
-        return true;
+        return $this->createResponse();
     }
 
-    public function getName(): string
+    function getName(): string
     {
         return 'doctrine';
     }

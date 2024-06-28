@@ -1,0 +1,5 @@
+zu_health_check:
+  type:
+    # Checks are disabled by default.
+    #smtp: true
+    #doctrine: true

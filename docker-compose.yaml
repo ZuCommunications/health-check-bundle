@@ -1,0 +1,57 @@
+services:
+  php:
+    build:
+      context: docker
+      dockerfile: php.dockerfile
+      args:
+        - version=latest
+    command: symfony server:start
+    ports:
+      - "80:8000"
+    container_name: "php"
+    depends_on:
+      - mariadb
+    environment:
+      PHP_FPM_USER: wodby
+      PHP_FPM_GROUP: wodby
+      COLUMNS: 80 # Set 80 columns for docker exec -it.
+      # To disable XDebug you have to comment out PHP_XDEBUG as it will check for the presence of the property rather
+      # than the value of it to determine whether to turn on xdebug
+      PHP_EXTENSIONS_DISABLE: ''
+      PHP_XDEBUG: 1
+      PHP_XDEBUG_MODE: 'debug'
+      PHP_XDEBUG_DEFAULT_ENABLE: 1
+      PHP_XDEBUG_REMOTE_CONNECT_BACK: 0
+      PHP_XDEBUG_IDEKEY: PHPSTORM
+      PHP_XDEBUG_REMOTE_LOG: /tmp/php-xdebug.log
+      PHP_XDEBUG_CLIENT_HOST: host.docker.internal # Docker 18.03+ Mac/Win
+      PHP_XDEBUG_MAX_NESTING_LEVEL: 10000
+      # Configures which logging messages should be added to the log file.
+      # If set above 7 (default), results in undesired, interrupted INFO output from the debugger.
+      # See: https://xdebug.org/docs/all_settings#log_level for more information
+      PHP_XDEBUG_LOG_LEVEL: 0
+      PHP_MAX_EXECUTION_TIME: 300
+      PHP_MAX_INPUT_TIME: 300
+      PHP_MAX_INPUT_VARS: 4000
+      PHP_MEMORY_LIMIT: 2G
+    volumes:
+      - .:/var/www/html/
+  mariadb:
+    image: wodby/mariadb
+    labels:
+      com.symfony.server.service-prefix: 'DATABASE'
+    container_name: "mariadb"
+    stop_grace_period: 30s
+    ports:
+      - "33450:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: $DB_ROOT_PASSWORD
+      MYSQL_DATABASE: $DB_NAME
+      MYSQL_USER: $DB_USER
+      MYSQL_PASSWORD: $DB_PASSWORD
+  mailer:
+    image: schickling/mailcatcher
+    container_name: "mailcatcher"
+    ports:
+      - "1091:1080"
+      - "1036:1025"

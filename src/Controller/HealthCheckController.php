@@ -25,6 +25,6 @@ class HealthCheckController extends AbstractController
     #[Route('/health-check', name: 'zu_health_check_health-check')]
     public function healthCheck(): Response
     {
-        return new JsonResponse(['status' => $this->healthCheckService->check()]);
+        return $this->healthCheckService->check();
     }
 }

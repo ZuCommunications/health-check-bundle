@@ -12,6 +12,7 @@ use Symfony\Component\DependencyInjection\Reference;
 use Zu\HealthCheckBundle\Controller\HealthCheckController;
 use Zu\HealthCheckBundle\Services\DoctrineCheckService;
 use Zu\HealthCheckBundle\Services\HealthCheckService;
+use Zu\HealthCheckBundle\Services\SMPTCheckService;
 
 class ZuHealthCheckBundle extends AbstractBundle
 {
@@ -21,8 +22,8 @@ class ZuHealthCheckBundle extends AbstractBundle
             ->arrayNode('type')
             ->addDefaultsIfNotSet()
             ->children()
-            ->booleanNode('smtp')->defaultTrue()->end()
-            ->booleanNode('doctrine')->defaultTrue()->end()
+            ->booleanNode('smtp')->defaultFalse()->end()
+            ->booleanNode('doctrine')->defaultFalse()->end()
             ->end()
             ->end()
             ->end();
@@ -31,31 +32,52 @@ class ZuHealthCheckBundle extends AbstractBundle
 
     public function loadExtension(array $config, ContainerConfigurator $containerConfigurator, ContainerBuilder $builder): void
     {
+        // String Helpers
         $idPrefix = 'zu_health_check.';
         $servicePrefix = 'service.';
         $controllerPrefix = 'controller.';
+
+        // Configs
+        $doctrineCheckEnabled = $config['type']['doctrine'];
+        $smtpCheckEnabled = $config['type']['smtp'];
+
+        // Service Definitions (Aliases)
+        $healthCheckerServiceAlias = $idPrefix . $servicePrefix . 'health_check';
+        $doctrineCheckerServiceAlias = $idPrefix . $servicePrefix . 'doctrine_check';
+        $smtpCheckerServiceAlias = $idPrefix . $servicePrefix . 'smtp_check';
+        $healthCheckerControllerAlias = $idPrefix . $controllerPrefix . 'health_check';
 
         // Controllers
         $healthCheckControllerDef = new Definition(HealthCheckController::class);
         $healthCheckControllerDef->setPublic(true);
         $healthCheckControllerDef->setArguments([
-            new Reference($idPrefix . $servicePrefix . 'health_check')
+            new Reference($healthCheckerServiceAlias)
         ]);
         $healthCheckControllerDef->addMethodCall('setContainer', [new Reference('service_container')]);
-        $builder->setDefinition($idPrefix . $controllerPrefix . 'health_check', $healthCheckControllerDef);
-        $builder->setAlias(HealthCheckController::class, $idPrefix . $controllerPrefix . 'health_check')->setPublic(true);
+        $builder->setDefinition($healthCheckerControllerAlias, $healthCheckControllerDef);
+        $builder->setAlias(HealthCheckController::class, $healthCheckerControllerAlias)->setPublic(true);
 
         // Services
         $healthCheckServiceDef = new Definition(HealthCheckService::class);
-        $healthCheckServiceDef->setArguments([
-            new Reference($idPrefix . $servicePrefix . 'doctrine_check')
-        ]);
-        $builder->setDefinition($idPrefix . $servicePrefix . 'health_check', $healthCheckServiceDef);
-        $builder->setAlias(HealthCheckService::class, $idPrefix . $servicePrefix . 'health_check');
+        // Only pass in the services if they are enabled. Otherwise, pass in null. Handle this in the service itself.
+        $healthCheckServiceDef->setArgument('$doctrineCheckService', $doctrineCheckEnabled === true ? new Reference($doctrineCheckerServiceAlias) : null);
+        $healthCheckServiceDef->setArgument('$smtpCheckService', $smtpCheckEnabled === true ? new Reference($smtpCheckerServiceAlias) : null);
+        $builder->setDefinition($healthCheckerServiceAlias, $healthCheckServiceDef);
+        $builder->setAlias(HealthCheckService::class, $healthCheckerServiceAlias);
 
-        $doctrineCheckServiceDef = new Definition(DoctrineCheckService::class);
-        $doctrineCheckServiceDef->setArgument('$enabled', $config['type']['doctrine']);
-        $builder->setDefinition($idPrefix . $servicePrefix . 'doctrine_check', $doctrineCheckServiceDef);
-        $builder->setAlias(DoctrineCheckService::class, $idPrefix . $servicePrefix . 'doctrine_check');
+        // Only register services if enabled.
+        if ($doctrineCheckEnabled === true) {
+            $doctrineCheckServiceDef = new Definition(DoctrineCheckService::class);
+            $builder->setDefinition($doctrineCheckerServiceAlias, $doctrineCheckServiceDef);
+            $builder->setAlias(DoctrineCheckService::class, $doctrineCheckerServiceAlias);
+            $doctrineCheckServiceDef->setArgument('$container', new Reference('service_container'));
+        }
+
+        if ($smtpCheckEnabled === true) {
+            $smtpCheckServiceDef = new Definition(SMPTCheckService::class);
+            $builder->setDefinition($smtpCheckerServiceAlias, $smtpCheckServiceDef);
+            $builder->setAlias(SMPTCheckService::class, $smtpCheckerServiceAlias);
+            $smtpCheckServiceDef->setArgument('$mailer', new Reference('mailer.mailer'));
+        }
     }
 }
