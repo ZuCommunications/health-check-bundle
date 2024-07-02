@@ -40,9 +40,10 @@ composer require zu/health-check-bundle
 ```
 
 ## Configuration
-If you have `symfony/flex` installed, the bundle should be automatically enabled and you can skip this step.
+⚠️ Flex is currently not setup, so you need to manually enable the bundle. ⚠️
+~~If you have `symfony/flex` installed, the bundle should be automatically enabled and you can skip this step.~~
 
-If not, you can manually enable the bundle by adding the following line to your `config/bundles.php` file:
+~~If not,~~ you can manually enable the bundle by adding the following line to your `config/bundles.php` file:
 
 ```php
 return [
