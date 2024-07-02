@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/ZuCommunications/health-check-bundle/compare/v1.0.0...v1.0.1) (2024-07-02)
+
+
+### Miscellaneous
+
+* update composer.json name ([105643a](https://github.com/ZuCommunications/health-check-bundle/commit/105643a5fa08f51fd85f7c3ff446cad099579379))
+
 ## 1.0.0 (2024-07-02)
 
 
