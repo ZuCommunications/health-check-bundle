@@ -1,4 +1,0 @@
-zu_health_check_bundle:
-  resource: '@ZuHealthCheckBundle/Controller/'
-  type: annotation
-  prefix: /zu

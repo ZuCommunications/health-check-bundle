@@ -33,7 +33,41 @@ Requires `symfony/mailer` package.
 
 ## Installation
 
-- TODO
+Run the following command to install the package:
+
+```bash
+composer require zu/health-check-bundle
+```
+
+## Configuration
+If you have `symfony/flex` installed, the bundle should be automatically enabled and you can skip this step.
+
+If not, you can manually enable the bundle by adding the following line to your `config/bundles.php` file:
+
+```php
+return [
+    ...
+    Zu\HealthCheckBundle\ZuHealthCheckBundle::class => ['all' => true],
+    ...
+];
+```
+
+Next you need to register the routes for the health check endpoints. You can do this by adding the following to your `config/routes/zu_health_check.yaml` file:
+
+```yaml
+zu_health_check_bundle:
+  resource: '@ZuHealthCheckBundle/config/routes.yaml'
+  prefix: /health
+```
+
+To configure the services to be checked, you can add the following configuration to your `zu_health_check.yaml` file:
+
+```yaml
+zu_health_check:
+    type:
+        smtp: false
+        doctrine: false
+```
 
 ## Development
  - TODO
