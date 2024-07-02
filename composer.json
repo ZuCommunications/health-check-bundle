@@ -1,5 +1,5 @@
 {
-    "name": "zu/health-check-bundle",
+    "name": "zucommunications/health-check-bundle",
     "description": "Symfony bundle to provide a health check endpoint",
     "type": "symfony-bundle",
     "license": "proprietary",

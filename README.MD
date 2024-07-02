@@ -40,9 +40,10 @@ composer require zu/health-check-bundle
 ```
 
 ## Configuration
-If you have `symfony/flex` installed, the bundle should be automatically enabled and you can skip this step.
+⚠️ Flex is currently not setup, so you need to manually enable the bundle. ⚠️
+~~If you have `symfony/flex` installed, the bundle should be automatically enabled and you can skip this step.~~
 
-If not, you can manually enable the bundle by adding the following line to your `config/bundles.php` file:
+~~If not,~~ you can manually enable the bundle by adding the following line to your `config/bundles.php` file:
 
 ```php
 return [
@@ -52,12 +53,14 @@ return [
 ];
 ```
 
-Next you need to register the routes for the health check endpoints. You can do this by adding the following to your `config/routes/zu_health_check.yaml` file:
+Next you need to register the routes for the health check endpoints. You can do this by adding the following to your `config/routes.yaml` file:
 
 ```yaml
+...
 zu_health_check_bundle:
   resource: '@ZuHealthCheckBundle/config/routes.yaml'
   prefix: /health
+...
 ```
 
 To configure the services to be checked, you can add the following configuration to your `zu_health_check.yaml` file:
