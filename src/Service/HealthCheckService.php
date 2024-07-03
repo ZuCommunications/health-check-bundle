@@ -1,6 +1,6 @@
 <?php
 
-namespace Zu\HealthCheckBundle\Services;
+namespace Zu\HealthCheckBundle\Service;
 
 use Symfony\Component\HttpFoundation\JsonResponse;
 

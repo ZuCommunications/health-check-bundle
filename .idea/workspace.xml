@@ -8,18 +8,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27a235f4-b68f-4974-bf7b-31cbb58dfec5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Symfony-Template/.idea/Symfony-Template.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Symfony-Template/.idea/Symfony-Template.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Symfony-Template/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Symfony-Template/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Symfony-Template/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Symfony-Template/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Symfony-Template/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Symfony-Template/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Symfony-Template/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Symfony-Template/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Symfony-Template/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../Symfony-Template/config/routes.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Symfony-Template/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Symfony-Template/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeception.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeception.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/phpspec.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpspec.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.MD" beforeDir="false" afterPath="$PROJECT_DIR$/README.MD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/doctrine.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/mailer.yaml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes/framework.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes/framework.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/HealthCheckController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HealthCheckController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Objects/Data.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Objects/Data.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/AbstractChecker.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/AbstractChecker.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/CheckerInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/CheckerInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/DoctrineCheckService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/DoctrineCheckService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/HealthCheckService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/HealthCheckService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/SMPTCheckService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/SMPTCheckService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ZuHealthCheckBundle.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ZuHealthCheckBundle.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -234,6 +245,37 @@
       <path value="$PROJECT_DIR$/../Symfony-Template/vendor/sebastian/resource-operations" />
       <path value="$PROJECT_DIR$/../Symfony-Template/vendor/sebastian/code-unit" />
       <path value="$PROJECT_DIR$/../Symfony-Template/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/vendor/masterminds/html5" />
+      <path value="$PROJECT_DIR$/vendor/symfony/phpunit-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dom-crawler" />
+      <path value="$PROJECT_DIR$/vendor/symfony/browser-kit" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-invoker" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/lines-of-code" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/complexity" />
+      <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
     </include_path>
   </component>
   <component name="ProjectColorInfo">{
@@ -251,6 +293,16 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "PHPUnit.ConfigurationTest.executor": "Run",
+    "PHPUnit.ConfigurationTest.testEmptyConfig.executor": "Run",
+    "PHPUnit.ConfigurationTest.testLoadExtension.executor": "Run",
+    "PHPUnit.DoctrineCheckServiceTest.executor": "Coverage",
+    "PHPUnit.HealthCheckControllerTest.executor": "Run",
+    "PHPUnit.HealthCheckControllerTest.testHealthCheck.executor": "Run",
+    "PHPUnit.HealthCheckServiceTest.executor": "Run",
+    "PHPUnit.SMPTCheckServiceTest.executor": "Run",
+    "PHPUnit.SMPTCheckServiceTest.testCheckFailure.executor": "Run",
+    "PHPUnit.SMPTCheckServiceTest.testCheckSuccess.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "/Users/max/projects/health-check-bundle",
@@ -281,15 +333,44 @@
       <recent name="$PROJECT_DIR$/src/Controller" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.Main">
+  <component name="RunManager" selected="PHPUnit.ConfigurationTest">
+    <configuration name="ConfigurationTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="ConfigurationTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/ConfigurationTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ConfigurationTest.testEmptyConfig" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="ConfigurationTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/ConfigurationTest.php" method="testEmptyConfig" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ConfigurationTest.testLoadExtension" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="ConfigurationTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/ConfigurationTest.php" method="testLoadExtension" scope="Method" />
+      <method v="2" />
+    </configuration>
     <configuration name="Main" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner configuration_file="$PROJECT_DIR$/phpunit.xml.dist" scope="XML" use_alternative_configuration_file="true" />
+      <method v="2" />
+    </configuration>
+    <configuration name="SMPTCheckServiceTest.testCheckFailure" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Zu\HealthCheckBundleTests\Service\SMPTCheckServiceTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Service/SMPTCheckServiceTest.php" method="testCheckFailure" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="SMPTCheckServiceTest.testCheckSuccess" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Zu\HealthCheckBundleTests\Service\SMPTCheckServiceTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Service/SMPTCheckServiceTest.php" method="testCheckSuccess" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="/Users/max/projects/Symfony-Template/vendor/autoload.php" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner configuration_file="$PROJECT_DIR$/../Symfony-Template/phpunit.xml.dist" scope="XML" use_alternative_configuration_file="true" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHPUnit.ConfigurationTest" />
+        <item itemvalue="PHPUnit.ConfigurationTest.testEmptyConfig" />
+        <item itemvalue="PHPUnit.ConfigurationTest.testLoadExtension" />
+        <item itemvalue="PHPUnit.SMPTCheckServiceTest.testCheckSuccess" />
+        <item itemvalue="PHPUnit.SMPTCheckServiceTest.testCheckFailure" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -315,7 +396,8 @@
       <workItem from="1719937377060" duration="4000" />
       <workItem from="1719941280740" duration="14294000" />
       <workItem from="1720022920669" duration="787000" />
-      <workItem from="1720024299061" duration="945000" />
+      <workItem from="1720024299061" duration="4676000" />
+      <workItem from="1720029016243" duration="2468000" />
     </task>
     <servers />
   </component>
@@ -361,7 +443,15 @@
           <line>440</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/tests/Service/SMPTCheckServiceTest.php</url>
+          <line>31</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/health_check_bundle@DoctrineCheckServiceTest.xml" NAME="DoctrineCheckServiceTest Coverage Results" MODIFIED="1720027939464" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

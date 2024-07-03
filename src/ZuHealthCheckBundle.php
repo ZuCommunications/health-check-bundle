@@ -10,9 +10,9 @@ use Symfony\Component\HttpKernel\Bundle\AbstractBundle;
 use Symfony\Component\DependencyInjection\Definition;
 use Symfony\Component\DependencyInjection\Reference;
 use Zu\HealthCheckBundle\Controller\HealthCheckController;
-use Zu\HealthCheckBundle\Services\DoctrineCheckService;
-use Zu\HealthCheckBundle\Services\HealthCheckService;
-use Zu\HealthCheckBundle\Services\SMPTCheckService;
+use Zu\HealthCheckBundle\Service\DoctrineCheckService;
+use Zu\HealthCheckBundle\Service\HealthCheckService;
+use Zu\HealthCheckBundle\Service\SMPTCheckService;
 
 class ZuHealthCheckBundle extends AbstractBundle
 {
@@ -27,7 +27,6 @@ class ZuHealthCheckBundle extends AbstractBundle
             ->end()
             ->end()
             ->end();
-
     }
 
     public function loadExtension(array $config, ContainerConfigurator $containerConfigurator, ContainerBuilder $builder): void

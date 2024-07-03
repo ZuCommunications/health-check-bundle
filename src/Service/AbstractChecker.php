@@ -1,6 +1,6 @@
 <?php
 
-namespace Zu\HealthCheckBundle\Services;
+namespace Zu\HealthCheckBundle\Service;
 
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
@@ -8,7 +8,7 @@ use Symfony\Component\Serializer\Encoder\XmlEncoder;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Serializer;
 use Zu\HealthCheckBundle\Objects\Data;
-use Zu\HealthCheckBundle\Services\CheckerInterface;
+use Zu\HealthCheckBundle\Service\CheckerInterface;
 
 abstract class AbstractChecker implements CheckerInterface
 {
