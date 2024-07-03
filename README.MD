@@ -59,7 +59,6 @@ Next you need to register the routes for the health check endpoints. You can do 
 ...
 zu_health_check_bundle:
   resource: '@ZuHealthCheckBundle/config/routes.yaml'
-  prefix: /health
 ...
 ```
 
