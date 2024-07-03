@@ -7,6 +7,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Mailer\Mailer;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Mime\Email;
+use Zu\HealthCheckBundle\Enum\CheckStatusEnum;
 
 class SMPTCheckService extends AbstractChecker
 {
@@ -27,9 +28,9 @@ class SMPTCheckService extends AbstractChecker
 
         try {
             $this->mailer->send($email);
-            $this->data->setStatus(AbstractChecker::$CONNECTION_OK);
+            $this->data->setStatus(CheckStatusEnum::CONNECTION_OK);
         } catch(\Exception $e) {
-            $this->data->setStatus(AbstractChecker::$CONNECTION_ERROR);
+            $this->data->setStatus(CheckStatusEnum::CONNECTION_ERROR);
             $this->data->setMessage(AbstractChecker::$CONNECTION_ERROR_MESSAGE);
         }
         return $this->createResponse();

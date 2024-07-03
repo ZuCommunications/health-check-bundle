@@ -9,7 +9,11 @@ use Symfony\Component\HttpKernel\Bundle\AbstractBundle;
 
 use Symfony\Component\DependencyInjection\Definition;
 use Symfony\Component\DependencyInjection\Reference;
+use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
+use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Zu\HealthCheckBundle\Controller\HealthCheckController;
+use Zu\HealthCheckBundle\Serializer\Normalizer\EnumNormalizer;
 use Zu\HealthCheckBundle\Service\DoctrineCheckService;
 use Zu\HealthCheckBundle\Service\HealthCheckService;
 use Zu\HealthCheckBundle\Service\SMPTCheckService;
@@ -35,6 +39,7 @@ class ZuHealthCheckBundle extends AbstractBundle
         $idPrefix = 'zu_health_check.';
         $servicePrefix = 'service.';
         $controllerPrefix = 'controller.';
+        $normalizerPrefix = 'normalizer.';
 
         // Configs
         $doctrineCheckEnabled = $config['type']['doctrine'];
@@ -45,6 +50,7 @@ class ZuHealthCheckBundle extends AbstractBundle
         $doctrineCheckerServiceAlias = $idPrefix . $servicePrefix . 'doctrine_check';
         $smtpCheckerServiceAlias = $idPrefix . $servicePrefix . 'smtp_check';
         $healthCheckerControllerAlias = $idPrefix . $controllerPrefix . 'health_check';
+        $enumNormalizerAlias = $idPrefix . $normalizerPrefix . 'enum';
 
         // Controllers
         $healthCheckControllerDef = new Definition(HealthCheckController::class);

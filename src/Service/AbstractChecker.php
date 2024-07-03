@@ -5,6 +5,7 @@ namespace Zu\HealthCheckBundle\Service;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Symfony\Component\Serializer\Encoder\XmlEncoder;
+use Symfony\Component\Serializer\Normalizer\BackedEnumNormalizer;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Serializer;
 use Zu\HealthCheckBundle\Objects\Data;
@@ -13,10 +14,6 @@ use Zu\HealthCheckBundle\Service\CheckerInterface;
 abstract class AbstractChecker implements CheckerInterface
 {
     protected Data $data;
-
-    public static $CONNECTION_OK = 'OK';
-    public static $CONNECTION_FAIL = 'FAIL';
-    public static $CONNECTION_ERROR = 'ERROR';
 
     public static $CONNECTION_FAILED_MESSAGE = 'Connection failed';
     public static $CONNECTION_ERROR_MESSAGE = 'Could not connect. Check Application Logs';
@@ -28,7 +25,10 @@ abstract class AbstractChecker implements CheckerInterface
     function createResponse(): JsonResponse
     {
         $encoders = [new XmlEncoder(), new JsonEncoder()];
-        $normalizers = [new ObjectNormalizer()];
+        $normalizers = [
+            new BackedEnumNormalizer(),
+            new ObjectNormalizer()
+        ];
 
         $serializer = new Serializer($normalizers, $encoders);
 

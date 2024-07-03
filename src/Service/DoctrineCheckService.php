@@ -4,6 +4,7 @@ namespace Zu\HealthCheckBundle\Service;
 
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Zu\HealthCheckBundle\Enum\CheckStatusEnum;
 
 class DoctrineCheckService extends AbstractChecker
 {
@@ -25,13 +26,13 @@ class DoctrineCheckService extends AbstractChecker
 
             $entityManager->getConnection()->connect();
             if ($entityManager->getConnection()->isConnected()) {
-                $this->data->setStatus(AbstractChecker::$CONNECTION_OK);
+                $this->data->setStatus(CheckStatusEnum::CONNECTION_OK);
             } else {
-                $this->data->setStatus(AbstractChecker::$CONNECTION_FAIL);
+                $this->data->setStatus(CheckStatusEnum::CONNECTION_FAIL);
                 $this->data->setMessage(AbstractChecker::$CONNECTION_FAILED_MESSAGE);
             }
         } catch(\Exception $e) {
-            $this->data->setStatus(AbstractChecker::$CONNECTION_ERROR);
+            $this->data->setStatus(CheckStatusEnum::CONNECTION_ERROR);
             $this->data->setMessage(AbstractChecker::$CONNECTION_ERROR_MESSAGE);
         }
         return $this->createResponse();

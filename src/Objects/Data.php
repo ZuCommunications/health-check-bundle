@@ -2,10 +2,12 @@
 
 namespace Zu\HealthCheckBundle\Objects;
 
+use Zu\HealthCheckBundle\Enum\CheckStatusEnum;
+
 class Data
 {
     private string $name;
-    private string $status;
+    private CheckStatusEnum $status;
     private string $message;
 
     public function __construct($name)
@@ -18,12 +20,12 @@ class Data
         return $this->name;
     }
 
-    public function getStatus(): string
+    public function getStatus(): CheckStatusEnum
     {
         return $this->status;
     }
 
-    public function setStatus(string $status): void
+    public function setStatus(CheckStatusEnum $status): void
     {
         $this->status = $status;
     }
