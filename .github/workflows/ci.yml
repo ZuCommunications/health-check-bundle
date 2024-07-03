@@ -1,0 +1,116 @@
+name: Pull Request Checks
+
+on:
+  pull_request:
+    branches:
+      - main
+      - '*-feature-branch'
+    types: [opened, synchronize, reopened, ready_for_review]
+    paths:
+      - '.github/workflows/ci.yml'
+      - 'config/**'
+      - 'src/**'
+      - 'tests/**'
+      - '.env'
+      - 'composer.json'
+
+jobs:
+  draft-pr-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fails in order to prevent merging and additional checks
+        if: github.event.pull_request.draft == true
+        run: exit 1
+      - name: Succeeds in order to allow merging and additional checks
+        if: github.event.pull_request.draft == false
+        run: exit 0
+
+  tests:
+    if: github.event.pull_request.draft == false
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    name: "Application Tests. PHP ${{ matrix.php }}, MySQL ${{ matrix.mssql }}"
+    needs: [draft-pr-check]
+
+    steps:
+      - name: 📤 Checkout project
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.sha }}
+          fetch-depth: 0
+
+      - name: 🐘 Install PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.3
+          extensions: xdebug
+          ini-values: xdebug.mode=coverage
+          tools: composer, symfony
+
+      - name:  📩 Cache Composer packages
+        id: composer-cache
+        run: |
+          echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+      - uses: actions/cache@v3
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-
+
+      - name: 📦 Install dependencies
+        if: steps.composer-cache.outputs.cache-hit != 'true'
+        run: composer install --no-progress --no-suggest --no-scripts
+
+      - name: 📩 Cache PHP Unit packages
+        id: phpunit-cache
+        uses: actions/cache@v3
+        with:
+          path: vendor/bin/.phpunit
+          key: ${{ runner.os }}-phpunit-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-phpunit-
+
+      - name: ✅ Run tests
+        run: XDEBUG_MODE=coverage ./vendor/bin/phpunit --coverage-text
+
+  code-standards:
+    if: github.event.pull_request.draft == false
+    runs-on: ubuntu-latest
+    name: Code style
+    needs: [draft-pr-check]
+
+    steps:
+      - name: 📤 Checkout project
+        uses: actions/checkout@v4
+
+      - name: 🐘 Install PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.3
+          tools: composer
+
+      - name: 📩 Cache Composer packages
+        id: composer-cache
+        run: |
+          echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+      - uses: actions/cache@v3
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-
+
+      - name: 📦 Install dependencies
+        if: steps.composer-cache.outputs.cache-hit != 'true'
+        run: composer install --no-progress --no-suggest
+
+      - name: 🛂 Validate composer.json and composer.lock
+        run: composer validate
+
+      - name: ✨ Run code style check
+        run: vendor/bin/php-cs-fixer --config=.php-cs-fixer.php fix -v --diff --dry-run
+
+      - name: 🔍 Run static analysis
+        run: vendor/bin/phpstan analyse --configuration phpstan.neon src/ tests/
+        

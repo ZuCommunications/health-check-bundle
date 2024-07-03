@@ -72,7 +72,10 @@ zu_health_check:
 ```
 
 ## Development
- - TODO
+ - In order to run this bundle in a Symfony application, you need to clone this repository and add it to your Symfony application as a local package.
+ - TODO: You can then run `composer require zu/health-check-bundle` to install the package.
 
-## Tests
-- TODO
+# Tests
+Run `php bin/phpunit` to run the tests or `XDEBUG_MODE=coverage ./vendor/bin/phpunit --coverage-text` to see text coverage report.
+
+We want to keep the test coverage as high as possible, so please make sure to write tests for any new code you write.
