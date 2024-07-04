@@ -3,13 +3,11 @@
 namespace Zu\HealthCheckBundleTests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\KernelBrowser;
-use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class HealthCheckControllerTest extends WebTestCase
 {
     private KernelBrowser $client;
-
 
     protected function setUp(): void
     {
@@ -18,7 +16,6 @@ class HealthCheckControllerTest extends WebTestCase
 
     public function testPing(): void
     {
-
         $this->client->request('GET', '/ping');
 
         $this->assertResponseIsSuccessful();

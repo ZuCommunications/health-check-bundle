@@ -3,7 +3,6 @@
 namespace Zu\HealthCheckBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 use Zu\HealthCheckBundle\Service\HealthCheckService;
@@ -12,8 +11,7 @@ class HealthCheckController extends AbstractController
 {
     public function __construct(
         private HealthCheckService $healthCheckService
-    )
-    {
+    ) {
     }
 
     #[Route('/ping', name: 'zu_health_check_ping')]

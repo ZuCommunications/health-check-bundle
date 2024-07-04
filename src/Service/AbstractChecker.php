@@ -3,35 +3,34 @@
 namespace Zu\HealthCheckBundle\Service;
 
 use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\Serializer\Encoder\JsonEncoder;
-use Symfony\Component\Serializer\Encoder\XmlEncoder;
-use Symfony\Component\Serializer\Normalizer\BackedEnumNormalizer;
-use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
-use Symfony\Component\Serializer\Serializer;
 use Zu\HealthCheckBundle\Objects\Data;
-use Zu\HealthCheckBundle\Service\CheckerInterface;
+use Zu\HealthCheckBundle\Utils\SerializerHelper;
 
 abstract class AbstractChecker implements CheckerInterface
 {
     protected Data $data;
 
-    public static $CONNECTION_FAILED_MESSAGE = 'Connection failed';
-    public static $CONNECTION_ERROR_MESSAGE = 'Could not connect. Check Application Logs';
+    public static string $CONNECTION_FAILED_MESSAGE = 'Connection failed';
+    public static string $CONNECTION_ERROR_MESSAGE = 'Could not connect. Check Application Logs';
+
     public function __construct()
     {
         $this->data = new Data($this->getName());
+        $this->getService();
     }
 
-    function createResponse(): JsonResponse
+    /**
+     * This method is used to create the response that will be returned by the checker in json.
+     */
+    public function createResponse(): JsonResponse
     {
-        $encoders = [new XmlEncoder(), new JsonEncoder()];
-        $normalizers = [
-            new BackedEnumNormalizer(),
-            new ObjectNormalizer()
-        ];
-
-        $serializer = new Serializer($normalizers, $encoders);
+        $serializer = SerializerHelper::createSerializer();
 
         return JsonResponse::fromJsonString($serializer->serialize($this->data, 'json'));
     }
+
+    /**
+     * This method is called by the constructor to set the service that the checker will use.
+     */
+    abstract protected function getService(): void;
 }

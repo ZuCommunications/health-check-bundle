@@ -7,10 +7,10 @@ use Zu\HealthCheckBundle\Enum\CheckStatusEnum;
 class Data
 {
     private string $name;
-    private CheckStatusEnum $status;
+    private ?CheckStatusEnum $status = null;
     private string $message;
 
-    public function __construct($name)
+    public function __construct(string $name)
     {
         $this->name = $name;
     }
@@ -20,7 +20,7 @@ class Data
         return $this->name;
     }
 
-    public function getStatus(): CheckStatusEnum
+    public function getStatus(): ?CheckStatusEnum
     {
         return $this->status;
     }

@@ -7,6 +7,8 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 interface CheckerInterface
 {
     public function check(): JsonResponse;
-    function createResponse(): JsonResponse;
-    function getName(): string;
+
+    public function createResponse(): JsonResponse;
+
+    public function getName(): string;
 }

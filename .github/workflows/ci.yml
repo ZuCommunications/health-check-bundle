@@ -108,17 +108,6 @@ jobs:
       - name: 🛂 Validate composer.json and composer.lock
         run: composer validate
 
-      - name: 📩 Cache Composer fixer packages
-        id: composer-cache-fixer
-        run: |
-          echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
-      - uses: actions/cache@v3
-        with:
-          path: ${{ steps.composer-cache-fixer.outputs.dir }}
-          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}-fixer
-          restore-keys: |
-            ${{ runner.os }}-composer-
-
       - name: 📦 Install cs-fixer dependencies
         if: steps.composer-cache.outputs.cache-hit != 'true'
         run: composer --working-dir=tools/php-cs-fixer install --no-progress --no-suggest
@@ -126,21 +115,10 @@ jobs:
       - name: ✨ Run code style check
         run: tools/php-cs-fixer/vendor/bin/php-cs-fixer --config=tools/php-cs-fixer/.php-cs-fixer.php fix src -v --diff --dry-run
 
-      - name: 📩 Cache Composer stan packages
-        id: composer-cache-stan
-        run: |
-          echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
-      - uses: actions/cache@v3
-        with:
-          path: ${{ steps.composer-cache-stan.outputs.dir }}
-          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}-stan
-          restore-keys: |
-            ${{ runner.os }}-composer-
-
       - name: 📦 Install dependencies
         if: steps.composer-cache.outputs.cache-hit != 'true'
         run: composer --working-dir=tools/php-stan install --no-progress --no-suggest
 
       - name: 🔍 Run static analysis
-        run: tools/php-stan/vendor/bin/phpstan analyse --configuration phpstan.neon src/ tests/
+        run: tools/php-stan/vendor/bin/phpstan analyse --configuration tools/php-stan/phpstan.neon src/ tests/
         

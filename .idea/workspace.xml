@@ -9,7 +9,36 @@
   <component name="ChangeListManager">
     <list default="true" id="27a235f4-b68f-4974-bf7b-31cbb58dfec5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.github/workflows/ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/ci.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Controller/HealthCheckController.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Controller/HealthCheckController.php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Controller/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Controller/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Controller/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Controller/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Enum/CheckStatusEnum.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Enum/CheckStatusEnum.php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Enum/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Enum/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Enum/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Enum/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Exception/DoctrineCheckerException.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Exception/DoctrineCheckerException.php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Exception/JsonResponseException.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Exception/JsonResponseException.php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Exception/SMTPCheckerException.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Exception/SMTPCheckerException.php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Exception/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Exception/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Exception/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Exception/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Kernel.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Kernel.php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Objects/Data.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Objects/Data.php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Objects/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Objects/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Objects/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Objects/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Service/AbstractChecker.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Service/AbstractChecker.php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Service/CheckerInterface.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Service/CheckerInterface.php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Service/DoctrineCheckService.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Service/DoctrineCheckService.php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Service/HealthCheckService.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Service/HealthCheckService.php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Service/SMPTCheckService.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Service/SMPTCheckService.php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Service/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Service/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Service/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Service/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Utils/SerializerHelper.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Utils/SerializerHelper.php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Utils/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Utils/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Utils/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Utils/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/ZuHealthCheckBundle.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/ZuHealthCheckBundle.php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +60,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpServers">
     <servers>
       <server host="localhost" id="6a082a7b-60b9-4ea4-8552-eeeefb4fa92a" name="localhost" port="8000" />
@@ -280,19 +310,32 @@
     "PHPUnit.ConfigurationTest.testLoadExtension.executor": "Run",
     "PHPUnit.DoctrineCheckServiceTest.executor": "Run",
     "PHPUnit.DoctrineCheckServiceTest.testCheckConnectionOk.executor": "Run",
+    "PHPUnit.DoctrineCheckServiceTest.testGetServices.executor": "Run",
+    "PHPUnit.DoctrineCheckServiceTest.testGetServicesCanNotGetEntityManager.executor": "Debug",
+    "PHPUnit.DoctrineCheckServiceTest.testGetServicesCanNotGetEntityManagerGetsOtherObjectInstead.executor": "Debug",
     "PHPUnit.HealthCheckControllerTest.executor": "Run",
     "PHPUnit.HealthCheckControllerTest.testHealthCheck.executor": "Run",
     "PHPUnit.HealthCheckServiceTest.executor": "Run",
-    "PHPUnit.HealthCheckServiceTest.testCheckAllServicesFail.executor": "Run",
-    "PHPUnit.HealthCheckServiceTest.testCheckThrowsJsonResponseException.executor": "Coverage",
+    "PHPUnit.HealthCheckServiceTest.testCheckAllServicesFail.executor": "Debug",
+    "PHPUnit.HealthCheckServiceTest.testCheckAllServicesOk.executor": "Run",
+    "PHPUnit.HealthCheckServiceTest.testCheckOneServiceFails.executor": "Run",
+    "PHPUnit.HealthCheckServiceTest.testCheckThrowsJsonResponseException.executor": "Debug",
+    "PHPUnit.HealthCheckServiceTest.testCombineJsonResponsesDataCombination.executor": "Run",
+    "PHPUnit.HealthCheckServiceTest.testCombineJsonResponsesWithHasCheckedFailed.executor": "Run",
+    "PHPUnit.HealthCheckServiceTest.testExtractDataFromResponse.executor": "Run",
+    "PHPUnit.HealthCheckServiceTest.testExtractDataFromResponseBodyIsNotJson.executor": "Run",
+    "PHPUnit.HealthCheckServiceTest.testExtractDataFromResponseBodyIsNotString.executor": "Run",
+    "PHPUnit.HealthCheckServiceTest.testHasCheckedFailedWithNoneOkStatus.executor": "Debug",
+    "PHPUnit.HealthCheckServiceTest.testHasCheckedFailedWithOkStatus.executor": "Run",
     "PHPUnit.HealthCheckServiceTest.testJsonError.executor": "Coverage",
-    "PHPUnit.Main.executor": "Coverage",
+    "PHPUnit.HealthCheckServiceTest.testextractDataFromResponse.executor": "Run",
+    "PHPUnit.Main.executor": "Run",
     "PHPUnit.SMPTCheckServiceTest.executor": "Run",
     "PHPUnit.SMPTCheckServiceTest.testCheckFailure.executor": "Run",
-    "PHPUnit.SMPTCheckServiceTest.testCheckSuccess.executor": "Debug",
+    "PHPUnit.SMPTCheckServiceTest.testCheckSuccess.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/max/projects/health-check-bundle",
+    "git-widget-placeholder": "ci-setup",
+    "last_opened_file_path": "/Users/max/projects/health-check-bundle/tools/php-unit",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -310,39 +353,40 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tools/php-unit" />
+      <recent name="$PROJECT_DIR$/tools/php-stan" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/.symfony/recipe/config" />
       <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/config" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/.symfony/recipe/config/packages" />
       <recent name="$PROJECT_DIR$/src/Controller" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.Main">
+  <component name="RunManager" selected="PHPUnit.SMPTCheckServiceTest">
     <configuration name="DoctrineCheckServiceTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Zu\HealthCheckBundleTests\Service\DoctrineCheckServiceTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Service/DoctrineCheckServiceTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="DoctrineCheckServiceTest.testCheckConnectionOk" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Zu\HealthCheckBundleTests\Service\DoctrineCheckServiceTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Service/DoctrineCheckServiceTest.php" method="testCheckConnectionOk" scope="Method" />
+    <configuration name="DoctrineCheckServiceTest.testGetServicesCanNotGetEntityManager" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Zu\HealthCheckBundleTests\Service\DoctrineCheckServiceTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Service/DoctrineCheckServiceTest.php" method="testGetServicesCanNotGetEntityManager" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="HealthCheckServiceTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Zu\HealthCheckBundleTests\Service\HealthCheckServiceTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Service/HealthCheckServiceTest.php" scope="Class" />
-      <method v="2" />
-    </configuration>
-    <configuration name="HealthCheckServiceTest.testCheckThrowsJsonResponseException" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Zu\HealthCheckBundleTests\Service\HealthCheckServiceTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Service/HealthCheckServiceTest.php" method="testCheckThrowsJsonResponseException" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <configuration name="HealthCheckServiceTest.testJsonError" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Zu\HealthCheckBundleTests\Service\HealthCheckServiceTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Service/HealthCheckServiceTest.php" method="testJsonError" scope="Method" />
+    <configuration name="DoctrineCheckServiceTest.testGetServicesCanNotGetEntityManagerGetsOtherObjectInstead" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Zu\HealthCheckBundleTests\Service\DoctrineCheckServiceTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Service/DoctrineCheckServiceTest.php" method="testGetServicesCanNotGetEntityManagerGetsOtherObjectInstead" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="Main" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner configuration_file="$PROJECT_DIR$/phpunit.xml.dist" scope="XML" use_alternative_configuration_file="true" />
+      <method v="2" />
+    </configuration>
+    <configuration name="SMPTCheckServiceTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Zu\HealthCheckBundleTests\Service\SMPTCheckServiceTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Service/SMPTCheckServiceTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="SMPTCheckServiceTest.testCheckSuccess" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Zu\HealthCheckBundleTests\Service\SMPTCheckServiceTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Service/SMPTCheckServiceTest.php" method="testCheckSuccess" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="/Users/max/projects/Symfony-Template/vendor/autoload.php" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -351,11 +395,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.HealthCheckServiceTest.testCheckThrowsJsonResponseException" />
-        <item itemvalue="PHPUnit.HealthCheckServiceTest.testJsonError" />
-        <item itemvalue="PHPUnit.HealthCheckServiceTest" />
+        <item itemvalue="PHPUnit.SMPTCheckServiceTest" />
+        <item itemvalue="PHPUnit.SMPTCheckServiceTest.testCheckSuccess" />
+        <item itemvalue="PHPUnit.DoctrineCheckServiceTest.testGetServicesCanNotGetEntityManagerGetsOtherObjectInstead" />
         <item itemvalue="PHPUnit.DoctrineCheckServiceTest" />
-        <item itemvalue="PHPUnit.DoctrineCheckServiceTest.testCheckConnectionOk" />
+        <item itemvalue="PHPUnit.DoctrineCheckServiceTest.testGetServicesCanNotGetEntityManager" />
       </list>
     </recent_temporary>
   </component>
@@ -386,6 +430,7 @@
       <workItem from="1720024299061" duration="4676000" />
       <workItem from="1720029016243" duration="10493000" />
       <workItem from="1720110280957" duration="2267000" />
+      <workItem from="1720460243794" duration="1919000" />
     </task>
     <servers />
   </component>
@@ -407,29 +452,24 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/vendor/symfony/http-kernel/Bundle/BundleExtension.php</url>
-          <line>58</line>
-          <option name="timeStamp" value="18" />
+          <url>file://$PROJECT_DIR$/src/Controller/HealthCheckController.php</url>
+          <line>28</line>
+          <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/vendor/symfony/http-kernel/Bundle/BundleExtension.php</url>
-          <line>63</line>
-          <option name="timeStamp" value="20" />
+          <url>file://$PROJECT_DIR$/src/Service/HealthCheckService.php</url>
+          <line>48</line>
+          <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/vendor/symfony/http-kernel/Bundle/BundleExtension.php</url>
-          <line>62</line>
-          <option name="timeStamp" value="21" />
+          <url>file://$PROJECT_DIR$/tests/Service/HealthCheckServiceTest.php</url>
+          <line>102</line>
+          <option name="timeStamp" value="41" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/vendor/symfony/http-kernel/Bundle/BundleExtension.php</url>
-          <line>60</line>
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/vendor/symfony/dependency-injection/ContainerBuilder.php</url>
-          <line>440</line>
-          <option name="timeStamp" value="23" />
+          <url>file://$PROJECT_DIR$/src/Service/DoctrineCheckService.php</url>
+          <line>48</line>
+          <option name="timeStamp" value="42" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
