@@ -4,6 +4,7 @@ namespace Zu\HealthCheckBundleTests\Service;
 
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 use Symfony\Component\Mailer\MailerInterface;
+use Zu\HealthCheckBundle\Enum\CheckStatusEnum;
 use Zu\HealthCheckBundle\Service\AbstractChecker;
 use Zu\HealthCheckBundle\Service\SMPTCheckService;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -31,7 +32,7 @@ class SMPTCheckServiceTest extends KernelTestCase
         $this->assertInstanceOf(JsonResponse::class, $response);
         $this->assertEquals(200, $response->getStatusCode());
         $this->assertStringContainsString(
-            sprintf('"status":"%s"', AbstractChecker::$CONNECTION_OK
+            sprintf('"status":"%s"', CheckStatusEnum::CONNECTION_OK->value
             ), $response->getContent()
         );
     }
@@ -49,7 +50,7 @@ class SMPTCheckServiceTest extends KernelTestCase
         $this->assertInstanceOf(JsonResponse::class, $response);
         $this->assertEquals(200, $response->getStatusCode());
         $this->assertStringContainsString(
-            sprintf('"status":"%s"', AbstractChecker::$CONNECTION_ERROR
+            sprintf('"status":"%s"', CheckStatusEnum::CONNECTION_ERROR->value
             ), $response->getContent()
         );
     }

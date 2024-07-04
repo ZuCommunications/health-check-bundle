@@ -22,6 +22,9 @@ class HealthCheckController extends AbstractController
         return new Response('pong');
     }
 
+    /**
+     * @throws \Exception
+     */
     #[Route('/health-check', name: 'zu_health_check_health-check')]
     public function healthCheck(): Response
     {

@@ -8,10 +8,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27a235f4-b68f-4974-bf7b-31cbb58dfec5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/ci.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeception.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeception.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/phpspec.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpspec.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.MD" beforeDir="false" afterPath="$PROJECT_DIR$/README.MD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +27,9 @@
   <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="CoverageOptionsProvider">
+    <option name="myAddOrReplace" value="0" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -136,7 +140,6 @@
       <path value="$PROJECT_DIR$/../Symfony-Template/vendor/symfony/monolog-bridge" />
       <path value="$PROJECT_DIR$/../Symfony-Template/vendor/symfony/cache" />
       <path value="$PROJECT_DIR$/../Symfony-Template/vendor/symfony/polyfill-php80" />
-      <path value="$PROJECT_DIR$/../Symfony-Template/vendor/zucommunications/health-check-bundle" />
       <path value="$PROJECT_DIR$/../Symfony-Template/vendor/symfony/dotenv" />
       <path value="$PROJECT_DIR$/../Symfony-Template/vendor/symfony/translation-contracts" />
       <path value="$PROJECT_DIR$/../Symfony-Template/vendor/symfony/config" />
@@ -185,16 +188,13 @@
       <path value="$PROJECT_DIR$/../Symfony-Template/vendor/symfony/process" />
       <path value="$PROJECT_DIR$/../Symfony-Template/vendor/symfony/polyfill-intl-grapheme" />
       <path value="$PROJECT_DIR$/../Symfony-Template/vendor/theseer/tokenizer" />
-      <path value="$PROJECT_DIR$/../Symfony-Template/vendor/symfony/property-access" />
       <path value="$PROJECT_DIR$/../Symfony-Template/vendor/doctrine/dbal" />
       <path value="$PROJECT_DIR$/../Symfony-Template/vendor/doctrine/inflector" />
       <path value="$PROJECT_DIR$/../Symfony-Template/vendor/doctrine/cache" />
       <path value="$PROJECT_DIR$/../Symfony-Template/vendor/doctrine/lexer" />
       <path value="$PROJECT_DIR$/../Symfony-Template/vendor/doctrine/doctrine-fixtures-bundle" />
       <path value="$PROJECT_DIR$/../Symfony-Template/vendor/doctrine/instantiator" />
-      <path value="$PROJECT_DIR$/../Symfony-Template/vendor/symfony/property-info" />
       <path value="$PROJECT_DIR$/../Symfony-Template/vendor/doctrine/common" />
-      <path value="$PROJECT_DIR$/../Symfony-Template/vendor/symfony/serializer" />
       <path value="$PROJECT_DIR$/../Symfony-Template/vendor/doctrine/persistence" />
       <path value="$PROJECT_DIR$/../Symfony-Template/vendor/doctrine/migrations" />
       <path value="$PROJECT_DIR$/../Symfony-Template/vendor/doctrine/data-fixtures" />
@@ -257,6 +257,10 @@
       <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
       <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
       <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/../Symfony-Template/vendor/symfony/property-info" />
+      <path value="$PROJECT_DIR$/../Symfony-Template/vendor/symfony/serializer" />
+      <path value="$PROJECT_DIR$/../Symfony-Template/vendor/symfony/property-access" />
+      <path value="$PROJECT_DIR$/../Symfony-Template/vendor/zucommunications/health-check-bundle" />
     </include_path>
   </component>
   <component name="ProjectColorInfo">{
@@ -277,15 +281,20 @@
     &quot;PHPUnit.ConfigurationTest.executor&quot;: &quot;Run&quot;,
     &quot;PHPUnit.ConfigurationTest.testEmptyConfig.executor&quot;: &quot;Run&quot;,
     &quot;PHPUnit.ConfigurationTest.testLoadExtension.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.DoctrineCheckServiceTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;PHPUnit.DoctrineCheckServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;PHPUnit.DoctrineCheckServiceTest.testCheckConnectionOk.executor&quot;: &quot;Run&quot;,
     &quot;PHPUnit.HealthCheckControllerTest.executor&quot;: &quot;Run&quot;,
     &quot;PHPUnit.HealthCheckControllerTest.testHealthCheck.executor&quot;: &quot;Run&quot;,
     &quot;PHPUnit.HealthCheckServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;PHPUnit.HealthCheckServiceTest.testCheckAllServicesFail.executor&quot;: &quot;Run&quot;,
+    &quot;PHPUnit.HealthCheckServiceTest.testCheckThrowsJsonResponseException.executor&quot;: &quot;Coverage&quot;,
+    &quot;PHPUnit.HealthCheckServiceTest.testJsonError.executor&quot;: &quot;Coverage&quot;,
+    &quot;PHPUnit.Main.executor&quot;: &quot;Coverage&quot;,
     &quot;PHPUnit.SMPTCheckServiceTest.executor&quot;: &quot;Run&quot;,
     &quot;PHPUnit.SMPTCheckServiceTest.testCheckFailure.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.SMPTCheckServiceTest.testCheckSuccess.executor&quot;: &quot;Run&quot;,
+    &quot;PHPUnit.SMPTCheckServiceTest.testCheckSuccess.executor&quot;: &quot;Debug&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;add-status-code-to-check&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/max/projects/health-check-bundle&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -314,29 +323,29 @@
       <recent name="$PROJECT_DIR$/src/Controller" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.ConfigurationTest">
-    <configuration name="ConfigurationTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="ConfigurationTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/ConfigurationTest.php" scope="Class" />
+  <component name="RunManager" selected="PHPUnit.Main">
+    <configuration name="DoctrineCheckServiceTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Zu\HealthCheckBundleTests\Service\DoctrineCheckServiceTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Service/DoctrineCheckServiceTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="ConfigurationTest.testEmptyConfig" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="ConfigurationTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/ConfigurationTest.php" method="testEmptyConfig" scope="Method" />
+    <configuration name="DoctrineCheckServiceTest.testCheckConnectionOk" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Zu\HealthCheckBundleTests\Service\DoctrineCheckServiceTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Service/DoctrineCheckServiceTest.php" method="testCheckConnectionOk" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="ConfigurationTest.testLoadExtension" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="ConfigurationTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/ConfigurationTest.php" method="testLoadExtension" scope="Method" />
+    <configuration name="HealthCheckServiceTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Zu\HealthCheckBundleTests\Service\HealthCheckServiceTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Service/HealthCheckServiceTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="HealthCheckServiceTest.testCheckThrowsJsonResponseException" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Zu\HealthCheckBundleTests\Service\HealthCheckServiceTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Service/HealthCheckServiceTest.php" method="testCheckThrowsJsonResponseException" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="HealthCheckServiceTest.testJsonError" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Zu\HealthCheckBundleTests\Service\HealthCheckServiceTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Service/HealthCheckServiceTest.php" method="testJsonError" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="Main" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner configuration_file="$PROJECT_DIR$/phpunit.xml.dist" scope="XML" use_alternative_configuration_file="true" />
-      <method v="2" />
-    </configuration>
-    <configuration name="SMPTCheckServiceTest.testCheckFailure" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Zu\HealthCheckBundleTests\Service\SMPTCheckServiceTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Service/SMPTCheckServiceTest.php" method="testCheckFailure" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <configuration name="SMPTCheckServiceTest.testCheckSuccess" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Zu\HealthCheckBundleTests\Service\SMPTCheckServiceTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Service/SMPTCheckServiceTest.php" method="testCheckSuccess" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="/Users/max/projects/Symfony-Template/vendor/autoload.php" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -345,11 +354,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.ConfigurationTest" />
-        <item itemvalue="PHPUnit.ConfigurationTest.testEmptyConfig" />
-        <item itemvalue="PHPUnit.ConfigurationTest.testLoadExtension" />
-        <item itemvalue="PHPUnit.SMPTCheckServiceTest.testCheckSuccess" />
-        <item itemvalue="PHPUnit.SMPTCheckServiceTest.testCheckFailure" />
+        <item itemvalue="PHPUnit.HealthCheckServiceTest.testCheckThrowsJsonResponseException" />
+        <item itemvalue="PHPUnit.HealthCheckServiceTest.testJsonError" />
+        <item itemvalue="PHPUnit.HealthCheckServiceTest" />
+        <item itemvalue="PHPUnit.DoctrineCheckServiceTest" />
+        <item itemvalue="PHPUnit.DoctrineCheckServiceTest.testCheckConnectionOk" />
       </list>
     </recent_temporary>
   </component>
@@ -378,7 +387,8 @@
       <workItem from="1719941280740" duration="14294000" />
       <workItem from="1720022920669" duration="787000" />
       <workItem from="1720024299061" duration="4676000" />
-      <workItem from="1720029016243" duration="4168000" />
+      <workItem from="1720029016243" duration="10493000" />
+      <workItem from="1720110280957" duration="2267000" />
     </task>
     <servers />
   </component>
@@ -424,15 +434,13 @@
           <line>440</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/tests/Service/SMPTCheckServiceTest.php</url>
-          <line>31</line>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/health_check_bundle@DoctrineCheckServiceTest.xml" NAME="DoctrineCheckServiceTest Coverage Results" MODIFIED="1720027939464" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/health_check_bundle@HealthCheckServiceTest_testJsonError.xml" NAME="HealthCheckServiceTest.testJsonError Coverage Results" MODIFIED="1720048436358" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/health_check_bundle@Main.xml" NAME="Main Coverage Results" MODIFIED="1720049149740" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/health_check_bundle@HealthCheckServiceTest_testCheckThrowsJsonResponseException.xml" NAME="HealthCheckServiceTest.testCheckThrowsJsonResponseException Coverage Results" MODIFIED="1720049065341" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

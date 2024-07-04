@@ -4,6 +4,7 @@ namespace Zu\HealthCheckBundleTests\Service;
 
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Zu\HealthCheckBundle\Enum\CheckStatusEnum;
 use Zu\HealthCheckBundle\Service\AbstractChecker;
 use Zu\HealthCheckBundle\Service\DoctrineCheckService;
 use Doctrine\ORM\EntityManagerInterface;
@@ -39,7 +40,7 @@ class DoctrineCheckServiceTest extends KernelTestCase
 
         $this->assertEquals(200, $response->getStatusCode());
         $this->assertStringContainsString(
-            sprintf('"status":"%s"', AbstractChecker::$CONNECTION_OK
+            sprintf('"status":"%s"', CheckStatusEnum::CONNECTION_OK->value
             ), $response->getContent()
         );
     }
@@ -54,7 +55,7 @@ class DoctrineCheckServiceTest extends KernelTestCase
 
         $this->assertEquals(200, $response->getStatusCode());
         $this->assertStringContainsString(
-            sprintf('"status":"%s"', AbstractChecker::$CONNECTION_FAIL
+            sprintf('"status":"%s"', CheckStatusEnum::CONNECTION_FAIL->value
             ), $response->getContent()
         );
     }
@@ -68,7 +69,7 @@ class DoctrineCheckServiceTest extends KernelTestCase
 
         $this->assertEquals(200, $response->getStatusCode());
         $this->assertStringContainsString(
-            sprintf('"status":"%s"', AbstractChecker::$CONNECTION_ERROR
+            sprintf('"status":"%s"', CheckStatusEnum::CONNECTION_ERROR->value
             ), $response->getContent()
         );
     }
