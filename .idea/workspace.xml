@@ -9,36 +9,7 @@
   <component name="ChangeListManager">
     <list default="true" id="27a235f4-b68f-4974-bf7b-31cbb58dfec5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.github/workflows/ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/ci.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Controller/HealthCheckController.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Controller/HealthCheckController.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Controller/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Controller/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Controller/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Controller/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Enum/CheckStatusEnum.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Enum/CheckStatusEnum.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Enum/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Enum/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Enum/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Enum/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Exception/DoctrineCheckerException.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Exception/DoctrineCheckerException.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Exception/JsonResponseException.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Exception/JsonResponseException.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Exception/SMTPCheckerException.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Exception/SMTPCheckerException.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Exception/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Exception/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Exception/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Exception/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Kernel.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Kernel.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Objects/Data.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Objects/Data.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Objects/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Objects/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Objects/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Objects/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Service/AbstractChecker.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Service/AbstractChecker.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Service/CheckerInterface.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Service/CheckerInterface.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Service/DoctrineCheckService.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Service/DoctrineCheckService.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Service/HealthCheckService.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Service/HealthCheckService.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Service/SMPTCheckService.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Service/SMPTCheckService.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Service/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Service/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Service/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Service/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Utils/SerializerHelper.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Utils/SerializerHelper.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Utils/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Utils/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/Utils/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/Utils/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/ZuHealthCheckBundle.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/ZuHealthCheckBundle.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/php-unit/coverage/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/php-unit/coverage/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -302,55 +273,55 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "PHPUnit.ConfigurationTest.executor": "Run",
-    "PHPUnit.ConfigurationTest.testEmptyConfig.executor": "Run",
-    "PHPUnit.ConfigurationTest.testLoadExtension.executor": "Run",
-    "PHPUnit.DoctrineCheckServiceTest.executor": "Run",
-    "PHPUnit.DoctrineCheckServiceTest.testCheckConnectionOk.executor": "Run",
-    "PHPUnit.DoctrineCheckServiceTest.testGetServices.executor": "Run",
-    "PHPUnit.DoctrineCheckServiceTest.testGetServicesCanNotGetEntityManager.executor": "Debug",
-    "PHPUnit.DoctrineCheckServiceTest.testGetServicesCanNotGetEntityManagerGetsOtherObjectInstead.executor": "Debug",
-    "PHPUnit.HealthCheckControllerTest.executor": "Run",
-    "PHPUnit.HealthCheckControllerTest.testHealthCheck.executor": "Run",
-    "PHPUnit.HealthCheckServiceTest.executor": "Run",
-    "PHPUnit.HealthCheckServiceTest.testCheckAllServicesFail.executor": "Debug",
-    "PHPUnit.HealthCheckServiceTest.testCheckAllServicesOk.executor": "Run",
-    "PHPUnit.HealthCheckServiceTest.testCheckOneServiceFails.executor": "Run",
-    "PHPUnit.HealthCheckServiceTest.testCheckThrowsJsonResponseException.executor": "Debug",
-    "PHPUnit.HealthCheckServiceTest.testCombineJsonResponsesDataCombination.executor": "Run",
-    "PHPUnit.HealthCheckServiceTest.testCombineJsonResponsesWithHasCheckedFailed.executor": "Run",
-    "PHPUnit.HealthCheckServiceTest.testExtractDataFromResponse.executor": "Run",
-    "PHPUnit.HealthCheckServiceTest.testExtractDataFromResponseBodyIsNotJson.executor": "Run",
-    "PHPUnit.HealthCheckServiceTest.testExtractDataFromResponseBodyIsNotString.executor": "Run",
-    "PHPUnit.HealthCheckServiceTest.testHasCheckedFailedWithNoneOkStatus.executor": "Debug",
-    "PHPUnit.HealthCheckServiceTest.testHasCheckedFailedWithOkStatus.executor": "Run",
-    "PHPUnit.HealthCheckServiceTest.testJsonError.executor": "Coverage",
-    "PHPUnit.HealthCheckServiceTest.testextractDataFromResponse.executor": "Run",
-    "PHPUnit.Main.executor": "Run",
-    "PHPUnit.SMPTCheckServiceTest.executor": "Run",
-    "PHPUnit.SMPTCheckServiceTest.testCheckFailure.executor": "Run",
-    "PHPUnit.SMPTCheckServiceTest.testCheckSuccess.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "ci-setup",
-    "last_opened_file_path": "/Users/max/projects/health-check-bundle/tools/php-unit",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "php.override.implement.member.chooser.php.doc": "NONE",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;PHPUnit.ConfigurationTest.executor&quot;: &quot;Run&quot;,
+    &quot;PHPUnit.ConfigurationTest.testEmptyConfig.executor&quot;: &quot;Run&quot;,
+    &quot;PHPUnit.ConfigurationTest.testLoadExtension.executor&quot;: &quot;Run&quot;,
+    &quot;PHPUnit.DoctrineCheckServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;PHPUnit.DoctrineCheckServiceTest.testCheckConnectionOk.executor&quot;: &quot;Run&quot;,
+    &quot;PHPUnit.DoctrineCheckServiceTest.testGetServices.executor&quot;: &quot;Run&quot;,
+    &quot;PHPUnit.DoctrineCheckServiceTest.testGetServicesCanNotGetEntityManager.executor&quot;: &quot;Debug&quot;,
+    &quot;PHPUnit.DoctrineCheckServiceTest.testGetServicesCanNotGetEntityManagerGetsOtherObjectInstead.executor&quot;: &quot;Debug&quot;,
+    &quot;PHPUnit.HealthCheckControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;PHPUnit.HealthCheckControllerTest.testHealthCheck.executor&quot;: &quot;Run&quot;,
+    &quot;PHPUnit.HealthCheckServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;PHPUnit.HealthCheckServiceTest.testCheckAllServicesFail.executor&quot;: &quot;Debug&quot;,
+    &quot;PHPUnit.HealthCheckServiceTest.testCheckAllServicesOk.executor&quot;: &quot;Run&quot;,
+    &quot;PHPUnit.HealthCheckServiceTest.testCheckOneServiceFails.executor&quot;: &quot;Run&quot;,
+    &quot;PHPUnit.HealthCheckServiceTest.testCheckThrowsJsonResponseException.executor&quot;: &quot;Debug&quot;,
+    &quot;PHPUnit.HealthCheckServiceTest.testCombineJsonResponsesDataCombination.executor&quot;: &quot;Run&quot;,
+    &quot;PHPUnit.HealthCheckServiceTest.testCombineJsonResponsesWithHasCheckedFailed.executor&quot;: &quot;Run&quot;,
+    &quot;PHPUnit.HealthCheckServiceTest.testExtractDataFromResponse.executor&quot;: &quot;Run&quot;,
+    &quot;PHPUnit.HealthCheckServiceTest.testExtractDataFromResponseBodyIsNotJson.executor&quot;: &quot;Run&quot;,
+    &quot;PHPUnit.HealthCheckServiceTest.testExtractDataFromResponseBodyIsNotString.executor&quot;: &quot;Run&quot;,
+    &quot;PHPUnit.HealthCheckServiceTest.testHasCheckedFailedWithNoneOkStatus.executor&quot;: &quot;Debug&quot;,
+    &quot;PHPUnit.HealthCheckServiceTest.testHasCheckedFailedWithOkStatus.executor&quot;: &quot;Run&quot;,
+    &quot;PHPUnit.HealthCheckServiceTest.testJsonError.executor&quot;: &quot;Coverage&quot;,
+    &quot;PHPUnit.HealthCheckServiceTest.testextractDataFromResponse.executor&quot;: &quot;Run&quot;,
+    &quot;PHPUnit.Main.executor&quot;: &quot;Run&quot;,
+    &quot;PHPUnit.SMPTCheckServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;PHPUnit.SMPTCheckServiceTest.testCheckFailure.executor&quot;: &quot;Run&quot;,
+    &quot;PHPUnit.SMPTCheckServiceTest.testCheckSuccess.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;ci-setup&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/max/projects/health-check-bundle/tools/php-unit&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;php.override.implement.member.chooser.php.doc&quot;: &quot;NONE&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mariadb"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mariadb&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/tools/php-unit" />

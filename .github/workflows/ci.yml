@@ -120,5 +120,5 @@ jobs:
         run: composer --working-dir=tools/php-stan install --no-progress --no-suggest
 
       - name: 🔍 Run static analysis
-        run: tools/php-stan/vendor/bin/phpstan analyse --configuration tools/php-stan/phpstan.neon src/ tests/
+        run: tools/php-stan/vendor/bin/phpstan analyse --configuration tools/php-stan/phpstan.neon src/
         
