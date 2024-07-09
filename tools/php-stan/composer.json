@@ -1,0 +1,15 @@
+{
+    "config": {
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
+    },
+    "require": {
+        "phpstan/phpstan": "^1.11",
+        "phpstan/extension-installer": "^1.4",
+        "phpstan/phpstan-doctrine": "^1.4",
+        "phpstan/phpstan-strict-rules": "^1.6",
+        "phpstan/phpstan-symfony": "^1.4",
+        "phpstan/phpstan-phpunit": "^1.4"
+    }
+}

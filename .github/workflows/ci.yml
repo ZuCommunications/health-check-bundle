@@ -5,7 +5,7 @@ on:
     branches:
       - main
       - '*-feature-branch'
-    types: [opened, synchronize, reopened, ready_for_review]
+    types: [ opened, synchronize, reopened, ready_for_review ]
     paths:
       - '.github/workflows/ci.yml'
       - 'config/**'
@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     name: "Application Tests. PHP ${{ matrix.php }}, MySQL ${{ matrix.mssql }}"
-    needs: [draft-pr-check]
+    needs: [ draft-pr-check ]
 
     steps:
       - name: 📤 Checkout project
@@ -47,7 +47,7 @@ jobs:
           ini-values: xdebug.mode=coverage
           tools: composer, symfony
 
-      - name:  📩 Cache Composer packages
+      - name: 📩 Cache Composer packages
         id: composer-cache
         run: |
           echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
@@ -78,7 +78,7 @@ jobs:
     if: github.event.pull_request.draft == false
     runs-on: ubuntu-latest
     name: Code style
-    needs: [draft-pr-check]
+    needs: [ draft-pr-check ]
 
     steps:
       - name: 📤 Checkout project
@@ -90,7 +90,7 @@ jobs:
           php-version: 8.3
           tools: composer
 
-      - name: 📩 Cache Composer packages
+      - name: 📩 Cache Composer project packages
         id: composer-cache
         run: |
           echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
@@ -101,16 +101,24 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-composer-
 
-      - name: 📦 Install dependencies
+      - name: 📦 Install project dependencies
         if: steps.composer-cache.outputs.cache-hit != 'true'
         run: composer install --no-progress --no-suggest
 
       - name: 🛂 Validate composer.json and composer.lock
         run: composer validate
 
-#      - name: ✨ Run code style check
-#        run: vendor/bin/php-cs-fixer --config=.php-cs-fixer.php fix -v --diff --dry-run
-#
-#      - name: 🔍 Run static analysis
-#        run: vendor/bin/phpstan analyse --configuration phpstan.neon src/ tests/
+      - name: 📦 Install cs-fixer dependencies
+        if: steps.composer-cache.outputs.cache-hit != 'true'
+        run: composer --working-dir=tools/php-cs-fixer install --no-progress --no-suggest
+
+      - name: ✨ Run code style check
+        run: tools/php-cs-fixer/vendor/bin/php-cs-fixer --config=tools/php-cs-fixer/.php-cs-fixer.php fix src -v --diff --dry-run
+
+      - name: 📦 Install dependencies
+        if: steps.composer-cache.outputs.cache-hit != 'true'
+        run: composer --working-dir=tools/php-stan install --no-progress --no-suggest
+
+      - name: 🔍 Run static analysis
+        run: tools/php-stan/vendor/bin/phpstan analyse --configuration tools/php-stan/phpstan.neon src/
         
