@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.2.0](https://github.com/ZuCommunications/health-check-bundle/compare/v0.1.0...v0.2.0) (2024-07-09)
+
+
+### Features
+
+* add http status code to check ([6652ba3](https://github.com/ZuCommunications/health-check-bundle/commit/6652ba39619c7e5e74e24dde0ec2d84bd82de5f2))
+
+
+### Miscellaneous
+
+* added proper ci checks ([365534d](https://github.com/ZuCommunications/health-check-bundle/commit/365534d7f6f667bc7e4dacddf5be8b84bd3b89f2))
+* ci adjust ([2150217](https://github.com/ZuCommunications/health-check-bundle/commit/215021791d8b0d9bb98b047f7160fb36ff516238))
+* comment out cs-fixer for now ([741aa57](https://github.com/ZuCommunications/health-check-bundle/commit/741aa57fa3f56e2e673d822a7a4c38408ecd728b))
+* run cs fixer ([ffaf4e0](https://github.com/ZuCommunications/health-check-bundle/commit/ffaf4e0545a619afc087e8782fd7a3e11a89abc3))
+
 ## 1.0.0 (2024-07-03)
 
 
