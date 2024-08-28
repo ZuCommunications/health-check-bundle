@@ -1,4 +1,4 @@
-# Zu/HealthCheckBundle
+# [zucommunications/health-check-bundle](https://packagist.org/packages/zucommunications/health-check-bundle)
 # ⚠️ This bundle is still in heavy development and not ready to be used!!! ⚠️
 ## Introduction
 
