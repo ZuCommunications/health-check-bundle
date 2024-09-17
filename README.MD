@@ -53,8 +53,7 @@ zu_health_check_bundle:
 ...
 ```
 
-To configure the services to be checked, you can add the following configuration to your `zu_health_check.yaml` file at the root of your project:
-
+To configure the services to be checked, you can add the following configuration to your `zu_health_check.yaml` in the `config` directory found at the root if your project:
 ```yaml
 zu_health_check:
     type:
