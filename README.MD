@@ -9,15 +9,6 @@ This bundle provides two endpoints:
 `/ping` for general health check
 `/health-check` for more detailed health check for configured services.
 
-To configure the services to be checked, you can add the following configuration to your `zu_health_check.yaml` file:
-
-```yaml
-zu_health_check:
-    type:
-        smtp: false
-        doctrine: false
-```
-
 Error messages currently ask you to check logs, this has NOT been implemented yet.
 
 ## Requirements
@@ -62,8 +53,7 @@ zu_health_check_bundle:
 ...
 ```
 
-To configure the services to be checked, you can add the following configuration to your `zu_health_check.yaml` file:
-
+To configure the services to be checked, you can add the following configuration to your `zu_health_check.yaml` in the `config` directory found at the root if your project:
 ```yaml
 zu_health_check:
     type:
@@ -73,7 +63,7 @@ zu_health_check:
 
 ## Development
  - In order to run this bundle in a Symfony application, you need to clone this repository and add it to your Symfony application as a local package.
- - TODO: You can then run `composer require zu/health-check-bundle` to install the package.
+ - TODO: You can then run `composer require zucommunications/health-check-bundle` to install the package.
 
 # Tests
 Run `php bin/phpunit` to run the tests or `XDEBUG_MODE=coverage ./vendor/bin/phpunit --coverage-text` to see text coverage report.
