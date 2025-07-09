@@ -36,7 +36,7 @@ Requires `symfony/mailer` package.
 Run the following command to install the package:
 
 ```bash
-composer require zu/health-check-bundle
+composer require zucommunications/health-check-bundle
 ```
 
 ## Configuration
