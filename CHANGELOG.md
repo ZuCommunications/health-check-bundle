@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.2.1](https://github.com/ZuCommunications/health-check-bundle/compare/v0.2.0...v0.2.1) (2025-07-09)
+
+
+### Bug Fixes
+
+* container called non public mailer.mailer ([#15](https://github.com/ZuCommunications/health-check-bundle/issues/15)) ([69339a4](https://github.com/ZuCommunications/health-check-bundle/commit/69339a4d1830b4eb3472ba834d4224e35b5cc34f))
+
+
+### Miscellaneous
+
+* update readme ([#10](https://github.com/ZuCommunications/health-check-bundle/issues/10)) ([288ac83](https://github.com/ZuCommunications/health-check-bundle/commit/288ac8373a74f433565b18625f81f9e05e49567b))
+
 ## [0.2.0](https://github.com/ZuCommunications/health-check-bundle/compare/v0.1.0...v0.2.0) (2024-07-09)
 
 
