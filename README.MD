@@ -62,7 +62,8 @@ zu_health_check:
 ```
 
 ## Development
- - In order to run this bundle in a Symfony application, you need to clone this repository and add it to your Symfony application as a local package.
+ - In order to run this bundle in a Symfony application, you need to clone this repository and add it to your Symfony application as a local package. https://aschmelyun.com/blog/installing-a-local-composer-package-in-your-php-project/
+- If you are using docker (compose) for developement, you will need to volumne mount the directory to gain access to the code from within the contianer. 
 
 # Tests
 Run `php bin/phpunit` to run the tests or `XDEBUG_MODE=coverage ./vendor/bin/phpunit --coverage-text` to see text coverage report.
