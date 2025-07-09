@@ -16,7 +16,6 @@ abstract class AbstractChecker implements CheckerInterface
     public function __construct()
     {
         $this->data = new Data($this->getName());
-        $this->getService();
     }
 
     /**
@@ -28,9 +27,4 @@ abstract class AbstractChecker implements CheckerInterface
 
         return JsonResponse::fromJsonString($serializer->serialize($this->data, 'json'));
     }
-
-    /**
-     * This method is called by the constructor to set the service that the checker will use.
-     */
-    abstract protected function getService(): void;
 }

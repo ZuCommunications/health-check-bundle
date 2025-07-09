@@ -4,6 +4,7 @@ namespace Zu\HealthCheckBundle;
 
 use Symfony\Component\Config\Definition\Configurator\DefinitionConfigurator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\DependencyInjection\Definition;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symfony\Component\DependencyInjection\Reference;
@@ -72,14 +73,14 @@ class ZuHealthCheckBundle extends AbstractBundle
             $doctrineCheckServiceDef = new Definition(DoctrineCheckService::class);
             $builder->setDefinition($doctrineCheckerServiceAlias, $doctrineCheckServiceDef);
             $builder->setAlias(DoctrineCheckService::class, $doctrineCheckerServiceAlias);
-            $doctrineCheckServiceDef->setArgument('$container', new Reference('service_container'));
+            $doctrineCheckServiceDef->setArgument('$entityManager', new Reference('doctrine.orm.entity_manager', ContainerInterface::IGNORE_ON_INVALID_REFERENCE));
         }
 
         if (true === $smtpCheckEnabled) {
             $smtpCheckServiceDef = new Definition(SMPTCheckService::class);
             $builder->setDefinition($smtpCheckerServiceAlias, $smtpCheckServiceDef);
             $builder->setAlias(SMPTCheckService::class, $smtpCheckerServiceAlias);
-            $smtpCheckServiceDef->setArgument('$container', new Reference('service_container'));
+            $smtpCheckServiceDef->setArgument('$mailer', new Reference('mailer.mailer', ContainerInterface::IGNORE_ON_INVALID_REFERENCE));
         }
     }
 }

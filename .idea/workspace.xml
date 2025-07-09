@@ -8,8 +8,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27a235f4-b68f-4974-bf7b-31cbb58dfec5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/ci.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/AbstractChecker.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/AbstractChecker.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/DoctrineCheckService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/DoctrineCheckService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/SMPTCheckService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/SMPTCheckService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ZuHealthCheckBundle.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ZuHealthCheckBundle.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Service/DoctrineCheckServiceTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Service/DoctrineCheckServiceTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Service/SMPTCheckServiceTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Service/SMPTCheckServiceTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +44,7 @@
       <server host="localhost" id="6a082a7b-60b9-4ea4-8552-eeeefb4fa92a" name="localhost" port="8000" />
     </servers>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/opt/homebrew/Cellar/php/8.3.8/bin/php">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/opt/homebrew/Cellar/php/8.3.9/bin/php">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
       <path value="$PROJECT_DIR$/vendor/symfony/string" />
@@ -273,55 +280,55 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;PHPUnit.ConfigurationTest.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.ConfigurationTest.testEmptyConfig.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.ConfigurationTest.testLoadExtension.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.DoctrineCheckServiceTest.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.DoctrineCheckServiceTest.testCheckConnectionOk.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.DoctrineCheckServiceTest.testGetServices.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.DoctrineCheckServiceTest.testGetServicesCanNotGetEntityManager.executor&quot;: &quot;Debug&quot;,
-    &quot;PHPUnit.DoctrineCheckServiceTest.testGetServicesCanNotGetEntityManagerGetsOtherObjectInstead.executor&quot;: &quot;Debug&quot;,
-    &quot;PHPUnit.HealthCheckControllerTest.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.HealthCheckControllerTest.testHealthCheck.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.HealthCheckServiceTest.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.HealthCheckServiceTest.testCheckAllServicesFail.executor&quot;: &quot;Debug&quot;,
-    &quot;PHPUnit.HealthCheckServiceTest.testCheckAllServicesOk.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.HealthCheckServiceTest.testCheckOneServiceFails.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.HealthCheckServiceTest.testCheckThrowsJsonResponseException.executor&quot;: &quot;Debug&quot;,
-    &quot;PHPUnit.HealthCheckServiceTest.testCombineJsonResponsesDataCombination.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.HealthCheckServiceTest.testCombineJsonResponsesWithHasCheckedFailed.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.HealthCheckServiceTest.testExtractDataFromResponse.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.HealthCheckServiceTest.testExtractDataFromResponseBodyIsNotJson.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.HealthCheckServiceTest.testExtractDataFromResponseBodyIsNotString.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.HealthCheckServiceTest.testHasCheckedFailedWithNoneOkStatus.executor&quot;: &quot;Debug&quot;,
-    &quot;PHPUnit.HealthCheckServiceTest.testHasCheckedFailedWithOkStatus.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.HealthCheckServiceTest.testJsonError.executor&quot;: &quot;Coverage&quot;,
-    &quot;PHPUnit.HealthCheckServiceTest.testextractDataFromResponse.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.Main.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.SMPTCheckServiceTest.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.SMPTCheckServiceTest.testCheckFailure.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.SMPTCheckServiceTest.testCheckSuccess.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;ci-setup&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/max/projects/health-check-bundle/tools/php-unit&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;php.override.implement.member.chooser.php.doc&quot;: &quot;NONE&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "PHPUnit.ConfigurationTest.executor": "Run",
+    "PHPUnit.ConfigurationTest.testEmptyConfig.executor": "Run",
+    "PHPUnit.ConfigurationTest.testLoadExtension.executor": "Run",
+    "PHPUnit.DoctrineCheckServiceTest.executor": "Run",
+    "PHPUnit.DoctrineCheckServiceTest.testCheckConnectionOk.executor": "Run",
+    "PHPUnit.DoctrineCheckServiceTest.testGetServices.executor": "Run",
+    "PHPUnit.DoctrineCheckServiceTest.testGetServicesCanNotGetEntityManager.executor": "Debug",
+    "PHPUnit.DoctrineCheckServiceTest.testGetServicesCanNotGetEntityManagerGetsOtherObjectInstead.executor": "Debug",
+    "PHPUnit.HealthCheckControllerTest.executor": "Run",
+    "PHPUnit.HealthCheckControllerTest.testHealthCheck.executor": "Run",
+    "PHPUnit.HealthCheckServiceTest.executor": "Run",
+    "PHPUnit.HealthCheckServiceTest.testCheckAllServicesFail.executor": "Debug",
+    "PHPUnit.HealthCheckServiceTest.testCheckAllServicesOk.executor": "Run",
+    "PHPUnit.HealthCheckServiceTest.testCheckOneServiceFails.executor": "Run",
+    "PHPUnit.HealthCheckServiceTest.testCheckThrowsJsonResponseException.executor": "Debug",
+    "PHPUnit.HealthCheckServiceTest.testCombineJsonResponsesDataCombination.executor": "Run",
+    "PHPUnit.HealthCheckServiceTest.testCombineJsonResponsesWithHasCheckedFailed.executor": "Run",
+    "PHPUnit.HealthCheckServiceTest.testExtractDataFromResponse.executor": "Run",
+    "PHPUnit.HealthCheckServiceTest.testExtractDataFromResponseBodyIsNotJson.executor": "Run",
+    "PHPUnit.HealthCheckServiceTest.testExtractDataFromResponseBodyIsNotString.executor": "Run",
+    "PHPUnit.HealthCheckServiceTest.testHasCheckedFailedWithNoneOkStatus.executor": "Debug",
+    "PHPUnit.HealthCheckServiceTest.testHasCheckedFailedWithOkStatus.executor": "Run",
+    "PHPUnit.HealthCheckServiceTest.testJsonError.executor": "Coverage",
+    "PHPUnit.HealthCheckServiceTest.testextractDataFromResponse.executor": "Run",
+    "PHPUnit.Main.executor": "Run",
+    "PHPUnit.SMPTCheckServiceTest.executor": "Run",
+    "PHPUnit.SMPTCheckServiceTest.testCheckFailure.executor": "Run",
+    "PHPUnit.SMPTCheckServiceTest.testCheckSuccess.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/max/projects/health-check-bundle/tools/php-unit",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "php.override.implement.member.chooser.php.doc": "NONE",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mariadb&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mariadb"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/tools/php-unit" />
@@ -436,11 +443,6 @@
           <url>file://$PROJECT_DIR$/tests/Service/HealthCheckServiceTest.php</url>
           <line>102</line>
           <option name="timeStamp" value="41" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/src/Service/DoctrineCheckService.php</url>
-          <line>48</line>
-          <option name="timeStamp" value="42" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
