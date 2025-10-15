@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.3.0](https://github.com/ZuCommunications/health-check-bundle/compare/v0.2.1...v0.3.0) (2025-10-15)
+
+### Added
+
+* add official support for Symfony 7.3 while retaining compatibility with Symfony 6.4
+
+### Changed
+
+* update all Symfony runtime dependencies to `^6.4|^7.0` and refresh the lockfile against Symfony 7.3
+* align dev tools (BrowserKit, CssSelector, Mailer, PHPUnit Bridge) with Symfony 7.3
+* document repository contribution guidelines in `AGENTS.md`
+
+### Upgrade Notes
+
+* update consumer applications with `composer require zucommunications/health-check-bundle:^0.3` to pull the Symfony 7 compatible release
+* ensure host projects register the bundle and route imports as before; no new configuration is required unless `framework.property_info` is already customized
+
 ## [0.2.1](https://github.com/ZuCommunications/health-check-bundle/compare/v0.2.0...v0.2.1) (2025-07-09)
 
 
