@@ -2,6 +2,13 @@
 
 ## [0.3.0](https://github.com/ZuCommunications/health-check-bundle/compare/v0.2.1...v0.3.0) (2025-10-15)
 
+
+### Features
+
+* add symfony 7 compatibility ([a89952b](https://github.com/ZuCommunications/health-check-bundle/commit/a89952b81d778c6ac624a2491ceffcca95ccd6bc))
+
+## [0.3.0](https://github.com/ZuCommunications/health-check-bundle/compare/v0.2.1...v0.3.0) (2025-10-15)
+
 ### Added
 
 * add official support for Symfony 7.3 while retaining compatibility with Symfony 6.4
